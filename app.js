@@ -11,7 +11,7 @@ add.get("/", (request, response) => {
 
   const newDate = addDays(new Date(year, month, date), 100);
   let newYear = newDate.getFullYear();
-  let newMonth = newDate.getMonth();
+  let newMonth = newDate.getMonth()+1;
   let newDay = newDate.getDate();
 
   response.send(`${newDay}/${newMonth}/${newYear}`);
